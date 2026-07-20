@@ -2,8 +2,6 @@ describe("Cadastro de dispositivos", () => {
   const body = require("../fixtures/cadastraDevice.json");
 
   it("Cadastra um dispositivo", () => {
-    const dataAtual = new Date().toISOString().slice(0, 10);
-
     cy.cadastraDispositivo(body).then((response) => {
       expect(response.status).equal(200);
       expect(response.body.id).not.empty;
