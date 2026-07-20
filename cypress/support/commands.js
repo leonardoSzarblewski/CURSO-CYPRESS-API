@@ -1,5 +1,3 @@
-import { faker } from "@faker-js/faker";
-
 // Deve registrar um usuário
 Cypress.Commands.add("registraUsuario", (payload) => {
   cy.request({
